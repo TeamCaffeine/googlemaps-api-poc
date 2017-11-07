@@ -1,0 +1,91 @@
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/tfLocation"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="Item Name"/>
+
+        <Button
+            android:id="@+id/bSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_above="@+id/map"
+            android:layout_toEndOf="@+id/tfLocation"
+            android:onClick="onClick"
+            android:text="Search" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@+id/circleFilter"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:max="5000"
+            android:progress="500" />
+
+        <Button
+            android:id="@+id/geocoding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geocode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ListView
+            android:layout_weight="0.60"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/itemLists"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:fastScrollAlwaysVisible="false"/>
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.40"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            tools:context="com.example.tkixi.googlemaps.MapsActivity" />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

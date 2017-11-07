@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GoogleMaps</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="items">
+        <item>iVacuum 6</item>
+        <item>iVacuum 7</item>
+    </string-array>
+
+    <string-array name="item_descriptions">
+        <item>My vacuum does have a headphone jack</item>
+        <item>My vacuum does not have a headphone jack</item>
+    </string-array>
+
+</resources>
